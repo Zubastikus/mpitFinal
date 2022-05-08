@@ -1,0 +1,225 @@
+body{
+	font-family: Roboto, Arial, sans-serif;
+	font-style: normal;
+	color: black;
+	/*overflow: hidden;*/
+}
+main{
+
+}
+/*.blurBack{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+}*/
+a {
+	text-decoration: none;
+	color: #0064BE
+}
+.window{
+	height: 100vh;
+	width: 100vw;
+	z-index: 2;
+}
+.window h1{
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+	.window .form-area a{
+		width: 50%;
+	}
+	.window .wrapper {
+		display:flex;
+		justify-content:center;
+	}
+	.window .sheet{
+		border-radius: 1.7rem;
+		width:62%;
+		box-shadow: 10px 10px 70px rgba(0, 0, 0, 0.25);
+		background: rgba(255, 255, 255, 1);
+	}
+	.window .sheet .left{
+		border-radius: 1.5rem 0 0 1.5rem;
+	}
+	.window .sheet .right{
+		border-radius: 0 1.5rem 1.5rem 0;
+		background-image: url(../img/iphone_mockup_evented.png);
+	}
+	.window .sheet .regRight{
+		border-radius: 0 1.5rem 1.5rem 0;
+		background-image: url(../img/regBg2.png);
+		min-height: 100%;
+	}
+	.window .form-area {
+		padding: 2em 2em 2em 2em;
+		height: 100%;
+		background-color: white;
+		position: relative;
+	}
+	.window .sheet img{
+		height: 3.2em;
+		margin-left: -25px;
+		margin-top: -15px;
+	}
+		.window .form-area input {
+			background: rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(10px);
+			/*margin-left: 20%;*/
+			margin-bottom: 0.7rem;
+			/*font-size: 1.3rem;*/
+			margin-top: 0.7rem;
+			border: 2px solid transparent;
+			border-radius: 0.8rem;
+			padding: 10px 20px;
+			width: 100%;
+		}
+		.window .form-area input::-webkit-input-placeholder{
+			color: rgba(0, 0, 0, .5);
+		}.window .form-area input::-moz-placeholder{
+			color: rgba(0, 0, 0, .5);
+		}
+		/*.window .form-area input:hover {
+			box-shadow: inset 4px 4px 12px rgba(2,163,255,0.3),
+            	inset -3px -3px 9px rgba(2,163,255,0.2);
+		}*/
+		.window .form-area input:focus {
+			box-shadow: inset 4px 4px 12px rgba(2,163,255,0.3),
+            	inset -3px -3px 9px rgba(2,163,255,0.2);
+			outline: #0064BE auto 2px;
+			border: 2px solid #0064BE;
+		}
+		.window .form-area .radio-area{
+			margin-top: 13px;
+		}
+		.window .form-area .d-flex .error {
+			display: flex;
+			color: red;
+		}
+		.window .form-area .d-flex .error img{
+			height: 20px;
+			margin-top: 0px;
+		}
+		.window .form-area input[type=submit], .btn_bg {
+			border: none;
+			color: white;
+			background-color: #0064BE;
+			
+		}
+		.window .form-area input:not([type=submit]) {
+			box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+		}
+/*		.window .form-area .terms p{
+			color: #BDBDBD;
+			text-align: center;
+		}*/
+	.window .have_acc{
+		margin-top: 20px;
+		padding-bottom: 50px;
+	}
+	.window .pass-h{
+		font-size: 1.7rem;
+	}
+	.window .pass-p{
+		font-size: 1.1rem;
+		color: #626262;
+	}
+.mx-15p{
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.bg{
+	position: absolute;
+	top: 0;
+	min-height: 100vh;
+	width: 100vw;
+	z-index: -5;
+}
+	.bg .leftBig{
+		background-image: url(../img/logBg1.png);
+	}
+	.bg .rightBig{
+		background-color: #232323;
+	}
+	.bg .leftBigReg{
+		background-image: url(../img/regBg1.png);
+	}
+	.bg .rightBigReg{
+		background-color: #181818;
+	}
+.bgBlured{
+	position: absolute;
+	top: 0;
+	min-height: 100vh;
+	width: 100vw;
+	z-index: -3;
+}
+	.bgBlured .col-6{
+		backdrop-filter: blur(.4em);
+	}
+.form_toggle{
+	margin-bottom: 0.7rem;
+	margin-top: 0.7rem;
+}
+.form_toggle {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+}
+.form_toggle-item {
+    float: left;
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+.form_toggle-item input[type=radio] {
+    display: none;
+}
+.form_toggle-item label {
+    display: inline-block;
+    padding: calc(0.3em + 0.2vw) 0;       
+    border: 1px solid #E3E3E3;
+    border-right: none;
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+}
+ 
+.form_toggle .item-1 label {
+    border-radius: .7em 0 0 .7em;
+}
+.form_toggle .item-2 label {
+    border-radius: 0 .7em .7em 0;
+    border-right: 1px solid #E3E3E3;
+}
+/* Checked */
+.form_toggle .item-1 input[type=radio]:checked + label {
+    background: #E3E3E3;
+}
+.form_toggle .item-2 input[type=radio]:checked + label {
+    background: #E3E3E3;
+}
+iframe {
+	width: 100%;
+	height: 100%;
+}
+.modal-content{
+	height: 90vh;
+}
+
+@media screen and (max-width: 600px) {
+	.window .wrapper {
+		display:block;
+	}
+	.window .form-area {
+		width:100%;
+	}
+	.window h1{
+		font-size: 30px;
+	}
+}
+@media screen and (min-width: 50em) {
+    html {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Мероприятие</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/events.css">
+	<!-- <link rel="stylesheet" href="css/fonts.css"> -->
+	<style type="text/css">
+		td, th { 
+		    border: 1px solid black; /* Граница вокруг ячеек */
+		}
+	</style>
+</head>
+<body onload="loadPage()" style="background: linear-gradient(264.42deg, #E3E3E3 0%, #F2F2F2 100%);">
+<header class="navbar navbar-expand-md fixed-top p-0" id="header">
+	<div class="container-fluid text-center text-black-50" id="headerInside">
+		<div class="name">
+			<a href="../index.html">
+				<img src="../img/logoWName.png">
+			</a>
+			<!-- <b class=""><a href="#" style="font-size: 1.8em">Evented</a></b> -->
+		</div>
+		<div class="btns" style="visibility: hidden;">
+			<a href="events.php"><button type="button" class="btn btn-default pos-right ml-2" style="">Выйти</button></a>
+			<a href=""><button type="button" class="btn btn-lineless pos-right mr-2 px-3" style="padding: calc(0.3em + 0.10vw) calc(0.6em + 0.30vw);"><? echo $user["email"]; ?></button></a>
+		</div>
+		<div class="btns" style="">
+			<a href="../login/login.html"><button type="button" class="btn btn-blue-fill pos-right ml-2" style="">Войти</button></a>
+			<a href="../login/registration.html"><button type="button" class="btn btn-lineless pos-right mr-2 px-3" style="padding: calc(0.3em + 0.10vw) calc(0.6em + 0.30vw);">Создать аккаунт</button></a>
+		</div>
+		<div class="d-flex mx-auto">
+			<p class="" style="margin-left: 0;"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Новости</a></p>
+			<p><a style="" href="events.html">Мероприятия</a></p>
+			<p><a style="" href="">Контакты</a></p>
+		</div>
+	</div>
+</header>
+<main id="main">
+<div class=" w-100" id="upbg">
+	<div class="container68 maxWmob90 p-3" id="up">
+		<div class="d-flex">
+			<div class="tag">
+				Вебинар
+			</div>
+			<p class="pos-right my-auto">01.09.2023</p>
+		</div>
+		<h5 class="mt-2">Таблицы: начало</h5>
+		<form action="../phpConnects/registrationOnEvent.php">
+			<input type="submit" class="btn btn-blue-fill" value="Записаться" disabled>
+			<input type="hidden" name="idEvent" value="<?php echo $_GET['idEvent']; ?>">
+			<input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+		</form>
+		<form action="../events/usersOnEvent.php" class="mt-2">
+			<input type="submit" class="btn btn-blue-fill" value="Список зарегистрированных пользователей" disabled>
+			<input type="hidden" name="idEvent" value="<?php echo $_GET['idEvent']; ?>">
+			<input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+		</form>
+	</div>
+</div>
+<div class=" w-100" id="downbg">
+	<div class="container68 maxWmob90 p-3" id="down">
+		<h5>О мероприятии</h5>
+		<p class="text-black-50">Вы часто используете таблицы? нет? тогда мы расскажем как их использовать</p>
+		<table border="1" style="font-size: 20px; border-collapse: collapse;">
+		    <tr>
+		        <th>Вид</td>
+		        <th>Текущий адрес</td>
+		        <th>Адрес в href ссылки</td>
+		        <th>Переходит на адрес</td>
+		    </tr>
+		    <tr>
+		        <td>Абсолютный</td>
+		        <td>любой или ---</td>
+		        <td>http://web.ru/languages</td>
+		        <td>http://web.ru/languages</td>
+		    </tr>
+		    <tr>
+		        <td>Укороченный абсолютный</td>
+		        <td>http://web.ru/languages</td>
+		        <td>/html</td>
+		        <td>http://web.ru/languages/html</td>
+		    </tr>
+		    <tr>
+		        <td>Относительный</td>
+		        <td>http://web.ru/languages/html/1</td>
+		        <td>2</td>
+		        <td>http://web.ru/languages/html/2</td>
+		    </tr>
+		    <tr>
+		        <td>Относительный</td>
+		        <td>http://web.ru/languages/html/1</td>
+		        <td>..</td>
+		        <td>http://web.ru/</td>
+		    </tr>
+		    <tr>
+		        <td>Относительный</td>
+		        <td>http://web.ru/languages/html/1</td>
+		        <td>../../../css</td>
+		        <td>http://web.ru/languages/css</td>
+		    </tr>
+		    <tr>
+		        <td>С якорем</td>
+		        <td>любой</td>
+		        <td>#1 (где-то должен быть id="1")</td>
+		        <td>/тебя перекинет к элементу с id="1"</td>
+		    </tr>
+		</table>
+	</div>
+</div>
+</main>
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+window.onresize = function(){ //изменение размеров окна
+	document.getElementById("main").style.paddingTop = (document.getElementById("headerInside").offsetHeight)+"px";
+
+}
+
+function loadPage(){
+	document.getElementById("main").style.paddingTop = (document.getElementById("headerInside").offsetHeight)+"px";
+}
+
+</script>
+</body>
+</html>

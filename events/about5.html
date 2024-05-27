@@ -25,7 +25,7 @@
 			<!-- <b class=""><a href="#" style="font-size: 1.8em">Evented</a></b> -->
 		</div>
 		<div class="btns" style="visibility: hidden;">
-			<a href="events.php"><button type="button" class="btn btn-default pos-right ml-2" style="">Выйти</button></a>
+			<a href="events.html"><button type="button" class="btn btn-default pos-right ml-2" style="">Выйти</button></a>
 			<a href=""><button type="button" class="btn btn-lineless pos-right mr-2 px-3" style="padding: calc(0.3em + 0.10vw) calc(0.6em + 0.30vw);"><? echo $user["email"]; ?></button></a>
 		</div>
 		<div class="btns" style="">
@@ -46,15 +46,15 @@
 			<div class="tag">
 				Вебинар
 			</div>
-			<p class="pos-right my-auto">03.09.2023</p>
+			<p class="pos-right my-auto">08.06.2024</p>
 		</div>
-		<h5 class="mt-2">Таблицы: продолжение</h5>
-		<form action="../phpConnects/registrationOnEvent.php">
+		<h5 class="mt-2">«Проверка гипотез в стартапе»</h5>
+		<form action="">
 			<input type="submit" class="btn btn-blue-fill" value="Записаться" disabled>
 			<input type="hidden" name="idEvent" value="<?php echo $_GET['idEvent']; ?>">
 			<input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
 		</form>
-		<form action="../events/usersOnEvent.php" class="mt-2">
+		<form action="" class="mt-2">
 			<input type="submit" class="btn btn-blue-fill" value="Список зарегистрированных пользователей" disabled>
 			<input type="hidden" name="idEvent" value="<?php echo $_GET['idEvent']; ?>">
 			<input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
@@ -64,37 +64,8 @@
 <div class=" w-100" id="downbg">
 	<div class="container68 maxWmob90 p-3" id="down">
 		<h5>О мероприятии</h5>
-		<p class="text-black-50">Слышали ли вы о табличной рекурсии? нет? тогда мы покажем что это</p>
-		<table border="1"><!--Создание таблицы. Border создаёт и изменяет все границы в таблице-->
-		    <tr> <!--Строка-->
-		        <td rowspan="2">тег rowspan - объединение строк в один столбец</td> <!--Столбец--><!--rowspan - объединение строк в один столбец-->
-		        <td>Это</td>
-		        <td>Таблица</td>
-		        <td style="background-image: url('../img/XD.jpg'); height: 100px; width: 100px; background-size: 100% 100%;"></td>
-		    </tr>
-		    <tr>
-		        <td colspan="2">тег colspan - объединение столбцов в одну строку</td> <!--colspan - объединение столбцов в одну строку-->
-		        <td>
-		            <table border="2">
-		                <tr>
-		                    <td>ъ</td>
-		                    <td style="border-left: 0px">
-		                    	<div style="background-color: red; height: 100px; width: 100px;">
-		                    		<img src="../img/x.png" style="height: 100%; width: 100%;">
-		                    	</div>
-		                    	<div style="background-color: blue; height: 100px; width: 100px;">
-		                    		<img src="../img/+.png" style="height: 100%; width: 100%;">
-		                    	</div>
-		                    </td>
-		                </tr>
-		                <tr>
-		                    <td>e</td>
-		                    <td>ъ</td>
-		                </tr>
-		            </table>
-		        </td>
-		    </tr>
-		</table>
+		<p class="text-black-50">Спикер: Алексеев Владислав Анатольевич, сооснователь …</p>
+		
 	</div>
 </div>
 </main>

@@ -39,32 +39,27 @@
 	<div class="container68 maxWmob90 p-3" id="up">
 		<div class="d-flex">
 			<div class="tag">
-				Какой-то прикол с js
+				Конференция
 			</div>
 			<p class="pos-right my-auto">01.01.2&#9786;23</p>
 		</div>
-		<h5 class="mt-2">Нажми на кнопку №1</h5>
-		<form action="../phpConnects/registrationOnEvent.php">
-			<input type="submit" class="btn btn-blue-fill" value="Записаться" disabled>
+		<h5 class="mt-2">«Startup village»</h5>
+		<form action="">
+			<input type="submit" class="btn btn-blue-fill" value="Купить билеты" disabled>
 			<input type="hidden" name="idEvent" value="<?php echo $_GET['idEvent']; ?>">
 			<input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
 		</form>
-		<form action="../events/usersOnEvent.php" class="mt-2">
+		<!--<form action="../events/usersOnEvent.php" class="mt-2">
 			<input type="submit" class="btn btn-blue-fill" value="Список зарегистрированных пользователей" disabled>
 			<input type="hidden" name="idEvent" value="<?php echo $_GET['idEvent']; ?>">
 			<input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
-		</form>
+		</form>-->
 	</div>
 </div>
 <div class=" w-100" id="downbg">
 	<div class="container68 maxWmob90 p-3" id="down">
 		<h5>О мероприятии</h5>
-		<p class="text-black-50">&#128561;&#128561;&#128561;</p>
-		<div style="margin: 50px 0 50px 100px">
-			<button class="btn btn-success" id="btn1">Кнопка №1</button>
-			<button class="btn btn-danger" id="btn2">Кнопка №2</button>
-		</div>
-		<img id="img" src="../img/FKWDaTmX0AA3c_U.jpg" onclick="document.getElementById('img').src = '../img/screamer.png'">
+		<p class="text-black-50">На конференцию приглашены представители многих стартапов в нашем городе…</p>
 	</div>
 </div>
 </main>

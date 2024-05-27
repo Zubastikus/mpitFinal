@@ -49,16 +49,17 @@
 			<p class="pos-right my-auto">03.09.2024</p>
 		</div>
 		<h5 class="mt-2">Концерт NoizeMC</h5>
+		<p>Цена за вход: 3000 руб</p>
 		<form action="../phpConnects/registrationOnEvent.php">
-			<input type="submit" class="btn btn-blue-fill" value="Записаться" disabled>
+			<input type="submit" class="btn btn-blue-fill" value="Купить места" disabled>
 			<input type="hidden" name="idEvent" value="<?php echo $_GET['idEvent']; ?>">
 			<input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
 		</form>
-		<form action="../events/usersOnEvent.php" class="mt-2">
+		<!--<form action="../events/usersOnEvent.php" class="mt-2">
 			<input type="submit" class="btn btn-blue-fill" value="Список зарегистрированных пользователей" disabled>
 			<input type="hidden" name="idEvent" value="<?php echo $_GET['idEvent']; ?>">
 			<input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
-		</form>
+		</form>-->
 	</div>
 </div>
 <div class=" w-100" id="downbg">

@@ -20,7 +20,7 @@
 			<!-- <b class=""><a href="#" style="font-size: 1.8em">Evented</a></b> -->
 		</div>
 		<div class="btns" style="visibility: hidden;">
-			<a href="events.php"><button type="button" class="btn btn-default pos-right ml-2" style="">Выйти</button></a>
+			<a href="events.html"><button type="button" class="btn btn-default pos-right ml-2" style="">Выйти</button></a>
 			<a href=""><button type="button" class="btn btn-lineless pos-right mr-2 px-3" style="padding: calc(0.3em + 0.10vw) calc(0.6em + 0.30vw);"><? echo $user["email"]; ?></button></a>
 		</div>
 		<div class="btns" style="">
@@ -39,17 +39,17 @@
 	<div class="container68 maxWmob90 p-3" id="up">
 		<div class="d-flex">
 			<div class="tag">
-				Лекция
+				Выставка
 			</div>
 			<p class="pos-right my-auto">09.05.2023</p>
 		</div>
 		<h5 class="mt-2">Научим вас использовать нумерованные списки</h5>
-		<form action="../phpConnects/registrationOnEvent.php">
+		<form action="">
 			<input type="submit" class="btn btn-blue-fill" value="Записаться" disabled>
 			<input type="hidden" name="idEvent" value="<?php echo $_GET['idEvent']; ?>">
 			<input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
 		</form>
-		<form action="../events/usersOnEvent.php" class="mt-2">
+		<form action="" class="mt-2">
 			<input type="submit" class="btn btn-blue-fill" value="Список зарегистрированных пользователей" disabled>
 			<input type="hidden" name="idEvent" value="<?php echo $_GET['idEvent']; ?>">
 			<input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
@@ -59,12 +59,8 @@
 <div class=" w-100" id="downbg">
 	<div class="container68 maxWmob90 p-3" id="down">
 		<h5>О мероприятии</h5>
-		<p class="text-black-50">Демонстрация работы нумерованных списков <b>(1, 2, 3, 4...)</b></p>
-		<ol start="3" type="A">
-		    <li>Тег start начинает пронумерованный список с указанного числа. тк я его использовал, список начался с 3й позиции</li>
-		    <li> с помощью тега type="A | a | I | i | 1" изменяется вид маркера</li>
-		    <li> с помощью тега reversed можно поменять нумерацию на 3, 2, 1...</li>
-		</ol>
+		<p class="text-black-50">Мультимедийная экспозиция  «Древний …»</p>
+		В экспозиции используются как натуральные объекты, так и …
 	</div>
 </div>
 </main>
